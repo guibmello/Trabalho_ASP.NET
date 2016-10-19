@@ -1,0 +1,102 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <style type="text/css">
+        @font-face {
+            font-family: "Android";
+            font-style: normal;
+            font-weight: 400;
+            src: local('Android'), url(/fonts/Android.woff) format('woff');
+        }
+
+        .auto-style1 {
+            width: 1285px;
+            height: 575px;
+        }
+        .auto-style2 {
+            height: 37px;
+        }
+        .auto-style3 {
+            height: 581px;
+            width: 429px;
+        }
+        .auto-style4 {
+            height: 581px;
+            width: 428px;
+        }
+        .auto-style5 {
+            width: 428px;
+        }
+        .auto-style8 {
+            width: 429px;
+        }
+    </style>
+    </head>
+    <body style="background-color:#4169E1; color:white; text-align:center; vertical-align:central; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; ">
+   
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style2" colspan="3">
+        <form id="form1" runat="server">
+            <div>
+                <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="Home.aspx" style="font-family:Android">Techno Shop</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="Home.aspx">Novidades</a></li>
+              <li><a href="Produtos.aspx">Produtos</a></li>
+              <li><a href="Login.aspx">Conta</a></li> 
+              <li><a href="Sobre.aspx">Sobre</a></li> 
+            </ul>
+            <div class="navbar-brand navbar-right" style="font-size:15px "><asp:LinkButton ID="lbDeslogar" runat="server" OnClick="lbDeslogar_Click" >SAIR</asp:LinkButton>
+            </div>
+            <a href="Login.aspx" class="navbar-brand navbar-right " style="font-size:16px"><span class="glyphicon glyphicon-user"></span> Bem-Vindo!
+            <asp:Label ID="lblUsuario" runat="server"></asp:Label>
+            &nbsp;</a>
+            </div>
+            
+            </nav>  
+            </div>
+                <div class="col-md-12 container-fluid"></div> 
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style4" style="vertical-align:top;" >&nbsp;</td>
+                    <td class="auto-style4" style="vertical-align:top;" ><asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder></td>
+                    <td class="auto-style3" style="vertical-align:top;" >&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style5">&nbsp;</td>
+                    <td class="auto-style5">&nbsp;</td>
+                    <td class="auto-style8">&nbsp;</td>
+                </tr>
+            </table>
+   
+            <script src="bootstrap/js/bootstrap.min.js"></script>
+
+        </form>
+
+        <footer style="background-color:#262626" class="modal-footer">
+            <h2 style="font-family:Android">Techno Shop</h2>
+            <a href="Home.aspx">Página Inicial</a>
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <br/>
+            <a href="Login.aspx">Login</a>
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <br/>
+            <a href="Sobre.aspx">Sobre Nós</a>
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <br/><br/>
+            © 2016 Techno Shop | Pedro Ravagnani e Guilherme Mello | Versão 1.0
+        </footer>
+    </body>
+</html>
